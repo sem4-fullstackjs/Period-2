@@ -29,3 +29,5 @@ console.log("addJoke:",testJoke.addJoke("Test"))
 console.log(_jokes)
 
 */
+
+module.exports = new Jokes();
