@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title><%= title %></title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+  <form method="POST" action="/storejoke">
+    <label for="jokes">Submit a joke: </label>
+    <input type="text" name="joke" />
+    <button>Submit</button>
+  </form>
+  <p>Here's all my jokes!</p>
+  <ul>
+    <%- jokes.map(v => `<li>${v}</li>`).join('') %>
+  </ul>
+  <a href="/">Back</a><br>
+  <%- console.log(counter) %>
+  You have visited a total of <%- counter %> times ^.^
+</body>
+
+</html>

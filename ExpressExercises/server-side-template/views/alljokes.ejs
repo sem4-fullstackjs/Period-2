@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+  <p>Here's all my jokes!</p>
+  <ul>
+    <%- jokes.map(v => `<li>${v}</li>`).join('') %>
+        </ul>
+    <a href="/">Back</a><br>
+    <p>You have visited a total of <%- counter %> times ^.^</p>
+
+  </body>
+</html>

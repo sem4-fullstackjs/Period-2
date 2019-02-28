@@ -7,8 +7,12 @@ router.get('/random', function(req, res, next) {
   res.json(jokes.getRandomJoke())
 });
 
-router.get('/all', function(req, res, next) {
-  res.json(jokes.getAllJokes())
+router.get("/alljokes", function(req, res, next) {
+  res.send();
+});
+
+router.get("/addJoke", function(req, res, next) {
+  res.send();
 });
 
 router.get('/error', function(req, res, next) {
