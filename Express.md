@@ -23,7 +23,7 @@ Express is a minimal and flexible Node.js web application framework that provide
 
 - Install the Express-generator: `npm install express-generator -g`
 - Open a terminal and navigate to the folder where you wan't to place your project folder.
-- Do a `express --version ejs myApp` Investigate the generated folder(s) and the node_modules folder details here
+- Do a `express --view ejs myApp` Investigate the generated folder(s) and the node_modules folder details here
 - Do a `npm install` Investigate the node_modules folder
 - Start the server like this: `SET DEBUG=myapp:* & npm start`
 - Or on Mac/linux: `DEBUG=myapp:* npm start`
