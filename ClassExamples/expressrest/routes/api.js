@@ -11,10 +11,6 @@ router.get('/all', function(req, res, next) {
   res.json(jokes.getAllJokes())
 });
 
-router.post('/add', function(req, res, next) {
-  res.send()
-});
-
 router.get('/error', function(req, res, next) {
   if (true) {
     var err = new Error("Error!!!")

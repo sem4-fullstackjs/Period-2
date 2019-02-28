@@ -11,7 +11,11 @@ router.get('/', function(req, res, next) {
   res.render('index', model);
 });
 
-router.get('/add', function(req, res, next) {
+router.get('/addJoke', function(req, res, next) {
+  res.render('addJoke');
+});
+
+router.get('/storeJoke', function(req, res, next) {
   res.render('addJoke');
 });
 
