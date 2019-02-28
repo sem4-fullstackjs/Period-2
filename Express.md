@@ -23,7 +23,7 @@ Express is a minimal and flexible Node.js web application framework that provide
 
 - Install the Express-generator: `npm install express-generator -g`
 - Open a terminal and navigate to the folder where you wan't to place your project folder.
-- Do a `express myApp -v=ejs` Investigate the generated folder(s) and the node_modules folder details here
+- Do a `express --version ejs myApp` Investigate the generated folder(s) and the node_modules folder details here
 - Do a `npm install` Investigate the node_modules folder
 - Start the server like this: `SET DEBUG=myapp:* & npm start`
 - Or on Mac/linux: `DEBUG=myapp:* npm start`
@@ -33,7 +33,7 @@ Express is a minimal and flexible Node.js web application framework that provide
 One utility tool you simply can't live without is nodemon. It will monitor for any changes in your source and automatically restart your server while you develop.  
 - Install it like: `npm install nodemon` or install it globally `npm install -g nodemon`.
 - Use it like (for an Express-generator generated project)
-- Windows: `setDEBUG=myApp:*/ & nodemon ./bin/www`
+- Windows: `SET DEBUG=myApp:* & nodemon ./bin/www`
 - Mac/Linux: `DEBUG=myapp:* nodemon ./bin/www` 
 
 ## A Minimal Express Application
