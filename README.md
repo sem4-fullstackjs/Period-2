@@ -51,7 +51,7 @@ In this period we will introduce Express, a minimal and flexible node.js package
 
 ### Explain Pros & Cons in using a NoSQL database like MongoDB as your data store, compared to a traditional Relational SQL Database like MySQL.
 
-###Explain reasons to add a layer like Mongoose, on top on of a schema-less database like MongoDB
+### Explain reasons to add a layer like Mongoose, on top on of a schema-less database like MongoDB
 
 ### Demonstrate, using a REST-API you have designed, how to perform all CRUD operations on a MongoDB
 
