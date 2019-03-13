@@ -205,3 +205,5 @@ I suggest, to use async-await whenever you have to deal with async behavior
 The tutorial assumes you have installed a local Mongo Client *Compass* (similar to Workbench for MySQL)- However, just use the UI-environment provided in the cloud by Atlas.
 
 However you can also follow this [tutorial](http://slides.mydemos.dk/noSQL/mongo_mongoose.html#24) made by educator Lars M. - Go from slide 24 to the end.
+
+Finished example [here](https://github.com/sem4-fullstackjs/Period-2/tree/master/MongoCrudExercises)
