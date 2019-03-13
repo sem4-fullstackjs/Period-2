@@ -5,7 +5,7 @@ MongoDB is a document database with the scalability and flexibility that you wan
 - MongoDB documents are composed of field-and-value pairs and have the following structure
 - The value of a field can be any of the BSON data types, including other documents, arrays, and arrays of documents
 
-[Examples]("https://docs.mongodb.com/manual/crud/")
+[Examples](https://docs.mongodb.com/manual/crud/)
 
 During this semester we're going to use MongoDB via Mongoose
 
@@ -24,7 +24,7 @@ MongoDB as of v. 3.2)
 ### Why Mongoose
 Why use a tool like mongoose on a database where one of its featured forces is - it's schema less. i.e. we can have all sort of fields in a document in a collection:
 
-```json
+```javascript
 { name : “Joe”, age : 30, interests : ‘football’ }
 { name : “Kate”, age : 25 }
 ```
@@ -34,9 +34,9 @@ Why use a tool like mongoose on a database where one of its featured forces is -
 - Basically, same arguments as why we use a ORM with a relational database 
 
 ## Getting Started
-Normally you'll want to work with a local databse - However for this semester we're working with [MongoDB Atlas]("https://www.mongodb.com/cloud/atlas?jmp=docs"), which is a fully-managed cloud database.
+Normally you'll want to work with a local databse - However for this semester we're working with [MongoDB Atlas](https://www.mongodb.com/cloud/atlas?jmp=docs), which is a fully-managed cloud database.
 
-To setup an MongoDB Atlas account follow this [Getting Started]("https://docs.atlas.mongodb.com/getting-started/?_ga=2.174146016.338595222.1552207628-1043058831.1552053789") guide.
+To setup an MongoDB Atlas account follow this [Getting Started](https://docs.atlas.mongodb.com/getting-started/?_ga=2.174146016.338595222.1552207628-1043058831.1552053789) guide.
 
 Then, in *all* your projects:
 ```javascript
@@ -48,7 +48,7 @@ mongoose.connect(mongoDB, { useNewUrlParser: true, useCreateIndex: true })
 ### Schemas
 Everything in Mongoose starts with a Schema. Each schema maps to a MongoDB collection and defines the shape of the documents within that collection.
 
-[Schemas Documentation]("https://mongoosejs.com/docs/guide.html")
+[Schemas Documentation](https://mongoosejs.com/docs/guide.html)
 
 ```javascript
 var userSchema = new mongoose.Schema({
@@ -59,7 +59,7 @@ var userSchema = new mongoose.Schema({
   lastLogin: Date
 });
 ```
-[SchemaTypes]("https://mongoosejs.com/docs/schematypes.html") handle definition of defaults, validation, getters, setters, field selection defaults for queries
+[SchemaTypes](https://mongoosejs.com/docs/schematypes.html) handle definition of defaults, validation, getters, setters, field selection defaults for queries
 
 Valid Schema Types
 - String
@@ -91,7 +91,7 @@ var schema = new Schema({
 ```
 ### Models
 
-A [Model]("http://mongoosejs.com/docs/models.html") is a compiled version of the schema.
+A [Model](http://mongoosejs.com/docs/models.html) is a compiled version of the schema.
 
 Models are fancy constructors compiled from our Schema definitions. Instances of these models represent documents which can be saved and retrieved from our database. All document creation and retrieval from the database is handled by these models
 
@@ -123,7 +123,7 @@ Basic mongoose validation rules
 - Validation is asynchronously recursive; when you call Model#save, sub-document - validation is executed as well
 - Validation supports complete customization
 
-[Validation Documentation]("https://mongoosejs.com/docs/validation.html")
+[Validation Documentation](https://mongoosejs.com/docs/validation.html)
 
 **Built in Validators**
 - All SchemaTypes have the built in required validator
@@ -200,8 +200,8 @@ This means that you can do things like:
 I suggest, to use async-await whenever you have to deal with async behavior
 
 ## CRUD with Mongoose
-**READ THIS BEFORE YOU START**: This [tutorial]("https://vegibit.com/mongoose-crud-tutorial/") assumes you have installed MongoDB locally, but use the [Start Code](https://github.com/fullstackjavascriptcode/crudMongooseStartCode) provided here to get a quick start - using your account on *MongoDB Atlas* 
+**READ THIS BEFORE YOU START**: This [tutorial](https://vegibit.com/mongoose-crud-tutorial/) assumes you have installed MongoDB locally, but use the [Start Code](https://github.com/fullstackjavascriptcode/crudMongooseStartCode) provided here to get a quick start - using your account on *MongoDB Atlas* 
 
 The tutorial assumes you have installed a local Mongo Client *Compass* (similar to Workbench for MySQL)- However, just use the UI-environment provided in the cloud by Atlas.
 
-However you can also follow this [tutorial]("http://slides.mydemos.dk/noSQL/mongo_mongoose.html#24") made by educator Lars M. - Go from slide 24 to the end.
+However you can also follow this [tutorial](http://slides.mydemos.dk/noSQL/mongo_mongoose.html#24) made by educator Lars M. - Go from slide 24 to the end.
