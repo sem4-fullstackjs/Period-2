@@ -9,7 +9,7 @@ MongoDB is a document database with the scalability and flexibility that you wan
 
 During this semester we're going to use MongoDB via Mongoose
 
-### What is  Mongoose
+## What is  Mongoose
 
 Mongoose is an Object Data Modeling (ODM) library for MongoDB and Node.js. 
 
@@ -45,7 +45,7 @@ mongoose.connect(mongoDB, { useNewUrlParser: true, useCreateIndex: true })
     .then((con) => console.log("Connected to Mongo"))
     .catch(err => console.log("Error:", err))
 ```
-### Schemas
+## Schemas
 Everything in Mongoose starts with a Schema. Each schema maps to a MongoDB collection and defines the shape of the documents within that collection.
 
 [Schemas Documentation](https://mongoosejs.com/docs/guide.html)
@@ -89,7 +89,7 @@ var schema = new Schema({
   }
 })
 ```
-### Models
+## Models
 
 A [Model](http://mongoosejs.com/docs/models.html) is a compiled version of the schema.
 
@@ -114,7 +114,7 @@ var mongoose = require( 'mongoose' );
 var User = mongoose.model("User");
 ```
 
-### Validation
+## Validation
 Basic mongoose validation rules
 - Validation is defined in the SchemaType
 - Validation is an internal piece of middleware
@@ -125,7 +125,7 @@ Basic mongoose validation rules
 
 [Validation Documentation](https://mongoosejs.com/docs/validation.html)
 
-**Built in Validators**
+### Built in Validators
 - All SchemaTypes have the built in required validator
 - Numbers have min and max validators
 - Strings have enum, match, maxlength and minlength validators
@@ -139,7 +139,7 @@ var UserSchema = new Schema(
 );
 ```
 
-**Custom Validators** 
+### Custom Validators
 
 If the built-in validators aren't enough, validation can be completely tailored to suit your needs
 
@@ -155,18 +155,18 @@ var userSchema = new Schema({
   }
 });
 ```
-### Middelware
+## Middelware
 Doing *things* before or after a mongoose function
 
 Middleware (pre and post hooks) are functions which are passed control during execution of asynchronous functions. Middleware is specified on the schema level and is useful for writing plugins. Mongoose 4.0 has 2 types of middleware: document middleware and query middleware.
 
-**Document middleware** is supported for the following document functions 
+### Document Middleware is supported for the following document functions 
 - init
 - validate
 - save
 - remove
 
-**Query middleware** is supported for the following Model and Query functions.
+### Query Middleware is supported for the following Model and Query functions.
 - count
 - find
 - findOne
@@ -186,7 +186,21 @@ userSchema.pre('save', function(next) {
   next();
 });
 ```
-### Mongoose and Promises
+### Comparison Query Operators
+MongoDB has several comparison operators for querying. 
+| Operator  | Definition  |
+|---|---|
+|`$eq` | Matches values that are equal to a given value.|
+|`$ne` | Matches all values that are not equal to a given value.|
+|`$gt` | Matches values that are greater than a given value.|
+|`$gte` | Matches values that are greater than or equal to a given value.|
+|`$lt` | Matches values that are less than a given value.|
+|`$lte` | Matches values that are less than or equal to a given value.|
+|`$in` | Matches any of the values contained in an array.|
+|`$nin` | Matches none of the values contained in an array.|
+
+
+## Mongoose and Promises
 Almost all examples in the mongoose documentation uses callback to demonstrate behavior
 
 This however is kind off old-fashioned, since all async operations and queries returns `thenables`
