@@ -1,7 +1,7 @@
 var mongoose = require("mongoose");
 var Schema = mongoose.Schema;
 
-var LocatonBlogSchema = new Schema({
+var LocationBlogSchema = new Schema({
   info: { type: String, required: true },
   img: String,
   pos: {
@@ -14,7 +14,7 @@ var LocatonBlogSchema = new Schema({
   lastUpdated: Date
 })
 
-LocatonBlogSchema.virtual("likedByCount").get(function () {
+LocationBlogSchema.virtual("likedByCount").get(function () {
   return this.likedBy.length
 })
 
@@ -23,6 +23,6 @@ LocationBlogSchema.pre("update", function (next) {
   next()
 })
 
-var LocationBlog = mongoose.model("LocationBlog", LocatonBlogSchema)
+var LocationBlog = mongoose.model("LocationBlog", LocationBlogSchema)
 
 module.exports = LocationBlog
