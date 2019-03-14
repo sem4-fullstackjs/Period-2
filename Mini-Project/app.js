@@ -1,5 +1,5 @@
-var connect = require("./dbSetup");
-connect(require("./settings").DEV_DB_URI);git 
+var connect = require("./dbConnect");
+connect(require("./settings").DEV_DB_URI);
 
 var createError = require('http-errors');
 var express = require('express');
