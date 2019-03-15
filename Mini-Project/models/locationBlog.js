@@ -5,24 +5,22 @@ var LocationBlogSchema = new Schema({
   info: { type: String, required: true },
   img: String,
   pos: {
-    longitude: { type: String, require: true },
-    latiitude: { type: String, require: true }
+    longitude: { type: Number, required: true },
+    latitude: { type: Number, required: true },
   },
   author: { type: Schema.Types.ObjectId, ref: "User", required: true },
-  likedBy: [Schema.Types.ObjectId],
+  likedBy: [{ type: Schema.Types.ObjectId, ref: "User" }],
   created: { type: Date, default: Date.now },
-  lastUpdated: Date
+  lastUpdated: Date,
 })
-
 LocationBlogSchema.virtual("likedByCount").get(function () {
-  return this.likedBy.length
+  return this.likedBy.length;
 })
 
 LocationBlogSchema.pre("update", function (next) {
   this.update({}, { $set: { lastUpdated: new Date() } })
-  next()
+  next();
 })
+var LocationBlog = mongoose.model("LocationBlog", LocationBlogSchema);
 
-var LocationBlog = mongoose.model("LocationBlog", LocationBlogSchema)
-
-module.exports = LocationBlog
+module.exports = LocationBlog;
