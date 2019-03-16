@@ -10,7 +10,7 @@ In this period we will introduce Express, a minimal and flexible node.js package
 ### Why would you consider a Scripting Language as JavaScript as your Backend Platform?
 Let's look at the results from Stack Overflow's [developer survey for 2018](https://insights.stackoverflow.com/survey/2018#technology-programming-scripting-and-markup-languages), you'll see that JavaScript is, for the sixth year in a row, the most commonely used programming language - In addition, Node.js is also taking a lead over other frameworks. 
 
-![s](./Img/stackoverflowsurvey.PNG)
+![StackSurvey2019](./Img/stackoverflowsurvey.PNG)
 
 The reason behind this, is that, Node.js is now in a solid maturity state. It got an ever-growing community and a strong ecosystem that helped it getting over the problems it had in its early days.
  
@@ -21,7 +21,9 @@ There's a lot of advantages to working in a JavaScript environment on your serve
 - and [more](https://snipcart.com/blog/javascript-nodejs-backend-development)
 
 JavaScript is only one of a plethora of popular backend languages that all got their pros & cons - However, it's important to know that it absolutely is an option to consider.
+
 ### Explain Pros & Cons in using Node.js + Express to implement your Backend compared to a strategy using, for example, Java/JAX-RS/Tomca
+
 
 ### Node.js uses a Single Threaded Non-blocking strategy to handle asynchronous task. Explain strategies to implement a Node.js based server architecture that still could take advantage of a multi-core Server.
  
