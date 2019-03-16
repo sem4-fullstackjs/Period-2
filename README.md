@@ -10,7 +10,7 @@ In this period we will introduce Express, a minimal and flexible node.js package
 ### Why would you consider a Scripting Language as JavaScript as your Backend Platform?
 Let's look at the results from Stack Overflow's [developer survey for 2018](https://insights.stackoverflow.com/survey/2018#technology-programming-scripting-and-markup-languages), you'll see that JavaScript is, for the sixth year in a row, the most commonely used programming language - In addition, Node.js is also taking a lead over other frameworks. 
 
-![Stack Overflow Survery 2019](../Img/stackoverflowsurvey.PNG)
+![Stack Overflow Survery 2019](./Img/stackoverflowsurvey.png)
 
 The reason behind this, is that, Node.js is now in a solid maturity state. It got an ever-growing community and a strong ecosystem that helped it getting over the problems it had in its early days.
  
