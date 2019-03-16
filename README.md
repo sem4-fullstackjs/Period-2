@@ -13,7 +13,7 @@ In this period we will introduce Express, a minimal and flexible node.js package
 
 ### Node.js uses a Single Threaded Non-blocking strategy to handle asynchronous task. Explain strategies to implement a Node.js based server architecture that still could take advantage of a multi-core Server.
  
-### Explain briefly how to deploy a Node/Express application including how to solve the following deployment problems:**
+### Explain briefly how to deploy a Node/Express application including how to solve the following deployment problems:
 
 #### a) Ensure that you Node-process restarts after a (potential) exception that closed the application
 
