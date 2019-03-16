@@ -8,7 +8,17 @@ In this period we will introduce Express, a minimal and flexible node.js package
 *Note: This description is too big for a single exam-question. It will be divided up into separate questions for the exam*
 
 ### Why would you consider a Scripting Language as JavaScript as your Backend Platform?
+Let's look at the results from Stack Overflow's [developer survey for 2018](https://insights.stackoverflow.com/survey/2018#technology-programming-scripting-and-markup-languages), you'll see that JavaScript is, for the sixth year in a row, the most commonely used programming language - In addition, Node.js is also taking a lead over other frameworks. 
 
+The reason behind this, is that, Node.js is now in a solid maturity state. It got an ever-growing community and a strong ecosystem that helped it getting over the problems it had in its early days.
+ 
+There's a lot of advantages to working in a JavaScript environment on your server, such as:
+- Since your frontend is probably running with JavaScript, you've got code universality across your stack. 
+- You can reuse code on both ends and stay coherent on all system levels.
+- You can write a web app that renders both on the browser and the server seamlessly.
+- and [more](https://snipcart.com/blog/javascript-nodejs-backend-development)
+
+JavaScript is only one of a plethora of popular backend languages that all got their pros & cons - However, it's important to know that it absolutely is an option to consider.
 ### Explain Pros & Cons in using Node.js + Express to implement your Backend compared to a strategy using, for example, Java/JAX-RS/Tomca
 
 ### Node.js uses a Single Threaded Non-blocking strategy to handle asynchronous task. Explain strategies to implement a Node.js based server architecture that still could take advantage of a multi-core Server.
