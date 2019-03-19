@@ -1,4 +1,4 @@
-# Node.js+Express, Testing with JavaScript, NoSQL with MongoDB and Mongoose
+## Node.js+Express, Testing with JavaScript, NoSQL with MongoDB and Mongoose
 *Note: This description is too big for a single exam-question. It will be divided up into separate questions for the exam*
 
 In this period we will introduce Express, a minimal and flexible node.js package, that provides a robust set of features for web and mobile applications. We will also introduce the Mocha test framework, together with a number of supplementing packages for assertions, mocking etc. Finally you will be introduced to a new kind of database - NoSQL Databases, with mongoDB as the document database.
@@ -154,16 +154,86 @@ The main heart of Node.js Processing model is *Event Loop*. If we understand thi
 You can read the diagram description in the re below.
 
 ref: [Node.js Architecture - Single Threaded Event Loop](https://www.journaldev.com/7462/node-js-architecture-single-threaded-event-loop)
+
 ## Explain briefly how to deploy a Node/Express application including how to solve the following deployment problems:
 
+DigitalOcean has a very good [tutorial](https://www.digitalocean.com/community/tutorials/how-to-set-up-a-node-js-application-for-production-on-ubuntu-16-04) on how to deploy your Node.js application
 
 ### Ensure that you Node-process restarts after a (potential) exception that closed the application
 
+In production, you don’t want your application to be offline, ever. This means you need to make sure it restarts both if the app crashes and if the server itself crashes. Although you hope that neither of those events occurs, realistically you must account for both eventualities by:
+
+Using a process manager to restart the app (and Node) when it crashes.
+Using the init system provided by your OS to restart the process manager when the OS crashes. It’s also possible to use the init system without a process manager.
+Node applications crash if they encounter an uncaught exception. The foremost thing you need to do is to ensure your app is well-tested and handles all exceptions (see [handle exceptions properly](https://expressjs.com/en/advanced/best-practice-performance.html#handle-exceptions-properly) for details). But as a fail-safe, put a mechanism in place to ensure that if and when your app crashes, it will automatically restart.
+
+**Use a Process Manager**
+In development, you started your app simply from the command line with node server.js or something similar. But doing this in production is a recipe for disaster. If the app crashes, it will be offline until you restart it. To ensure your app restarts if it crashes, use a process manager. A process manager is a “container” for applications that facilitates deployment, provides high availability, and enables you to manage the application at runtime.
+
+In addition to restarting your app when it crashes, a process manager can enable you to:
+- Gain insights into runtime performance and resource consumption.
+- Modify settings dynamically to improve performance.
+- Control clustering (StrongLoop PM and pm2).
+
+The most popular process managers for Node are as follows:
+- [StrongLoop Process Manager](http://strong-pm.io/)
+- [PM2](https://github.com/Unitech/pm2)
+- [Forever](https://www.npmjs.com/package/forever)
+
+For a feature-by-feature comparison of the three process managers, see [Strong PM Compare](http://strong-pm.io/compare/). For a more detailed introduction to all three, see [Process managers for Express apps](https://expressjs.com/en/advanced/pm.html).
+
+Using any of these process managers will suffice to keep your application up, even if it does crash from time to time.
+
+ref: [expressjs.com](https://expressjs.com/en/advanced/best-practice-performance.html#ensure-your-app-automatically-restarts)
+
 ### Ensure that you Node-process restarts after a server (Ubuntu) restart
+
+he next layer of reliability is to ensure that your app restarts when the server restarts. Systems can still go down for a variety of reasons. To ensure that your app restarts if the server crashes, use the init system built into your OS. The two main init systems in use today are [systemd](https://wiki.debian.org/systemd) and [Upstart](http://upstart.ubuntu.com/).
+
+There are two ways to use init systems with your Express app:
+
+Run your app in a process manager, and install the process manager as a service with the init system. The process manager will restart your app when the app crashes, and the init system will restart the process manager when the OS restarts. This is the recommended approach.
+Run your app (and Node) directly with the init system. This is somewhat simpler, but you don’t get the additional advantages of using a process manager.
+
+ref: [expressjs.com](https://expressjs.com/en/advanced/best-practice-performance.html#ensure-your-app-automatically-restarts)
 
 ### Ensure that you can take advantage of a multi-core system
 
-### Ensure that you can run “many” node-applications on a single droplet on the same port (80
+A single instance of Node.js runs in a single thread. To take advantage of multi-core systems, the user will sometimes want to launch a cluster of Node.js processes to handle the load.
+
+The cluster module allows easy creation of child processes that all share server ports.
+
+```javascript
+const cluster = require('cluster')
+const http = require('http')
+const numCPUs = require('os').cpus().length;
+
+if (cluster.isMaster) {
+  console.log(`Master ${process.pid} is running`);
+
+  // Fork workers.
+  for (let i = 0; i < numCPUs; i++) {
+    cluster.fork()
+  }
+
+  cluster.on('exit', (worker, code, signal) => {
+    console.log(`worker ${worker.process.pid} died`)
+  })
+} else {
+  // Workers can share any TCP connection
+  // In this case it is an HTTP server
+  http.createServer((req, res) => {
+    res.writeHead(200)
+    res.end('hello world\n')
+  }).listen(8000)
+
+  console.log(`Worker ${process.pid} started`)
+}
+```
+
+ref: [nodejs.org](https://nodejs.org/api/cluster.html)
+
+### Ensure that you can run “many” node-applications on a single droplet on the same port (80)
 
 ## Explain the difference between “Debug outputs” and application logging. What’s wrong with console.log(..) statements in our backend-code.
 
