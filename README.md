@@ -1,13 +1,11 @@
-# Period-2 
-
-### Node.js+Express, Testing with JavaScript, NoSQL with MongoDB and Mongoose
+# Node.js+Express, Testing with JavaScript, NoSQL with MongoDB and Mongoose
+*Note: This description is too big for a single exam-question. It will be divided up into separate questions for the exam*
 
 In this period we will introduce Express, a minimal and flexible node.js package, that provides a robust set of features for web and mobile applications. We will also introduce the Mocha test framework, together with a number of supplementing packages for assertions, mocking etc. Finally you will be introduced to a new kind of database - NoSQL Databases, with mongoDB as the document database.
 
-## Node.js and Express
-*Note: This description is too big for a single exam-question. It will be divided up into separate questions for the exam*
+# Node.js and Express
 
-### Why would you consider a Scripting Language as JavaScript as your Backend Platform?
+## Why would you consider a Scripting Language as JavaScript as your Backend Platform?
 Let's look at the results from Stack Overflow's [developer survey for 2018](https://insights.stackoverflow.com/survey/2018#technology-programming-scripting-and-markup-languages), you'll see that JavaScript is, for the sixth year in a row, the most commonely used programming language - In addition, Node.js is also taking a lead over other frameworks. 
 
 ![StackSurvey2019](./Img/stackoverflowsurvey.PNG)
@@ -22,9 +20,9 @@ There's a lot of advantages to working in a JavaScript environment on your serve
 
 JavaScript is only one of a plethora of popular backend languages that all got their pros & cons - However, it's important to know that it absolutely is an option to consider.
 
-### Explain Pros & Cons in using Node.js + Express to implement your Backend compared to a strategy using, for example, Java/JAX-RS/Tomca
+## Explain Pros & Cons in using Node.js + Express to implement your Backend compared to a strategy using, for example, Java/JAX-RS/Tomca
 
-#### The Benefits of Node.js
+### The Benefits of Node.js
 **- Robust Technology Stack**
 
 JavaScript has proven to be an undisputed leader among the most popular programming languages. You can view the [2018 - Node.js User Survey Report ](https://nodejs.org/en/user-survey-report/#overview) for its usages.
@@ -65,7 +63,7 @@ One word – npm, a default Node.js package manager, it also serves as a marketp
 
 With such a vast variety of free tools accessible in a few clicks, there is a huge potential for the use of Node.js. At the same time, open source software enjoys a growing popularity as it allows you to build new solutions reducing the overall costs of development and time to market.
 
-#### The Drawbacks of Node.js
+### The Drawbacks of Node.js
 **- Performance Bottlenecks and Design Issues**
 
 Two of the most argued about aspects of Node.js programming are its insufficiency with heavy computations and the so-called *“callback hell”*. Before we get into too many details, let’s figure out what’s what.
@@ -113,7 +111,7 @@ Although, the core Node.js modules are quite stable and can be considered mature
 
 The fact that the Node.js ecosystem is mostly open source, has its impact as well. While the quality of the core Node.js technology is supervised by Joyent and other major contributors, the rest of the tools might lack the quality and high coding standards set by global organizations.
 
-#### Conclusion
+### Conclusion
 
 Obviously, with all the listed Node.js advantages and disadvantages, the technology is no silver bullet. But neither is Java, .Net framework or PHP. Yet, there are specific cases where each one of the technologies perform best. For Node.js, these are real-time applications with intense I/O, requiring speed and scalability.
 
@@ -127,7 +125,7 @@ However, you can’t choose a language or tool just because another super-succes
 
 ref: [The Good and the Bad of Node.js - Web App Development](https://www.altexsoft.com/blog/engineering/the-good-and-the-bad-of-node-js-web-app-development/)
 
-### Node.js uses a Single Threaded Non-blocking strategy to handle asynchronous task. Explain strategies to implement a Node.js based server architecture that still could take advantage of a multi-core Server.
+## Node.js uses a Single Threaded Non-blocking strategy to handle asynchronous task. Explain strategies to implement a Node.js based server architecture that still could take advantage of a multi-core Server.
  
 Node.js follows a *Single Threaded with Event Loop* model. Node.js Processing model is mainly based on JavaScript Event based model with JavaScript callbakc mechanism.
 
@@ -156,57 +154,57 @@ The main heart of Node.js Processing model is *Event Loop*. If we understand thi
 You can read the diagram description in the re below.
 
 ref: [Node.js Architecture - Single Threaded Event Loop](https://www.journaldev.com/7462/node-js-architecture-single-threaded-event-loop)
-### Explain briefly how to deploy a Node/Express application including how to solve the following deployment problems:
+## Explain briefly how to deploy a Node/Express application including how to solve the following deployment problems:
 
 
-#### a) Ensure that you Node-process restarts after a (potential) exception that closed the application
+### Ensure that you Node-process restarts after a (potential) exception that closed the application
 
-#### b) Ensure that you Node-process restarts after a server (Ubuntu) restart
+### Ensure that you Node-process restarts after a server (Ubuntu) restart
 
-#### c) Ensure that you can take advantage of a multi-core system
+### Ensure that you can take advantage of a multi-core system
 
-#### d) Ensure that you can run “many” node-applications on a single droplet on the same port (80
+### Ensure that you can run “many” node-applications on a single droplet on the same port (80
 
-### Explain the difference between “Debug outputs” and application logging. What’s wrong with console.log(..) statements in our backend-code.
+## Explain the difference between “Debug outputs” and application logging. What’s wrong with console.log(..) statements in our backend-code.
 
-### Demonstrate a system using application logging and *coloured* debug statements.
+## Demonstrate a system using application logging and *coloured* debug statements.
 
-### Explain, using relevant examples, concepts related to testing a REST-API using Node/JavaScript + relevant packages 
+## Explain, using relevant examples, concepts related to testing a REST-API using Node/JavaScript + relevant packages 
 
-### Explain, using relevant examples, the Express concept - Middleware.
+## Explain, using relevant examples, the Express concept - Middleware.
 
-### Explain, using relevant examples, how to implement sessions and the legal implications of doing this.
+## Explain, using relevant examples, how to implement sessions and the legal implications of doing this.
   
-### Compare the express strategy toward (server side) templating with the one you used with Java on second semester.
+## Compare the express strategy toward (server side) templating with the one you used with Java on second semester.
   
-### Demonstrate a simple Server Side Rendering example using a technology of your own choice (pug, EJS, ..).
+## Demonstrate a simple Server Side Rendering example using a technology of your own choice (pug, EJS, ..).
   
-### Explain, using relevant examples, your strategy for implementing a REST-API with Node/Express and show how you can "test" all the four CRUD operations programmatically using, for example, the Request package.
+## Explain, using relevant examples, your strategy for implementing a REST-API with Node/Express and show how you can "test" all the four CRUD operations programmatically using, for example, the Request package.
   
-### Explain, using relevant examples, about testing JavaScript code, relevant packages (Mocha etc.) and how to test asynchronous code.
+## Explain, using relevant examples, about testing JavaScript code, relevant packages (Mocha etc.) and how to test asynchronous code.
   
-### Explain, using relevant examples, different ways to mock out databases, HTTP-request etc.
+## Explain, using relevant examples, different ways to mock out databases, HTTP-request etc.
 
-### Explain, preferably using an example, how you have deployed your node/Express applications, and which of the Express Production best practices you have followed.
+## Explain, preferably using an example, how you have deployed your node/Express applications, and which of the Express Production best practices you have followed.
 
-## NoSQL, MongoDB and Mongoose
+# NoSQL, MongoDB and Mongoose
 
-### Explain, generally, what is meant by a NoSQL database.
+## Explain, generally, what is meant by a NoSQL database.
 
-### Explain Pros & Cons in using a NoSQL database like MongoDB as your data store, compared to a traditional Relational SQL Database like MySQL.
+## Explain Pros & Cons in using a NoSQL database like MongoDB as your data store, compared to a traditional Relational SQL Database like MySQL.
 
-### Explain reasons to add a layer like Mongoose, on top on of a schema-less database like MongoDB
+## Explain reasons to add a layer like Mongoose, on top on of a schema-less database like MongoDB
 
-### Demonstrate, using a REST-API you have designed, how to perform all CRUD operations on a MongoDB
+## Demonstrate, using a REST-API you have designed, how to perform all CRUD operations on a MongoDB
 
-### Explain the benefits of using Mongoose, and demonstrate, using your own code, an example involving all CRUD operations
+## Explain the benefits of using Mongoose, and demonstrate, using your own code, an example involving all CRUD operations
 
-### Explain the “6 Rules of Thumb: Your Guide Through the Rainbow” as to how and when you would use normalization vs. denormalization.
+## Explain the “6 Rules of Thumb: Your Guide Through the Rainbow” as to how and when you would use normalization vs. denormalization.
 
-### Demonstrate, using your own code-samples, decisions you have made regarding → normalization vs denormalization 
+## Demonstrate, using your own code-samples, decisions you have made regarding → normalization vs denormalization 
 
-### Explain, using a relevant example, a full JavaScript backend including relevant test cases to test the REST-API (not on the production database)
+## Explain, using a relevant example, a full JavaScript backend including relevant test cases to test the REST-API (not on the production database)
 
-### __***These two topics will be introduced in period-3***__
+## __***These two topics will be introduced in period-3***__
 - Explain about indexes in MongoDB, how to create them, and demonstrate how you have used them.
 - Explain, using your own code examples, how you have used some of MongoDB's "special" indexes like TTL and 2dsphere
