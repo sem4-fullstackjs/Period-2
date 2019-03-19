@@ -168,6 +168,7 @@ Using the init system provided by your OS to restart the process manager when th
 Node applications crash if they encounter an uncaught exception. The foremost thing you need to do is to ensure your app is well-tested and handles all exceptions (see [handle exceptions properly](https://expressjs.com/en/advanced/best-practice-performance.html#handle-exceptions-properly) for details). But as a fail-safe, put a mechanism in place to ensure that if and when your app crashes, it will automatically restart.
 
 **Use a Process Manager**
+
 In development, you started your app simply from the command line with node server.js or something similar. But doing this in production is a recipe for disaster. If the app crashes, it will be offline until you restart it. To ensure your app restarts if it crashes, use a process manager. A process manager is a “container” for applications that facilitates deployment, provides high availability, and enables you to manage the application at runtime.
 
 In addition to restarting your app when it crashes, a process manager can enable you to:
@@ -234,6 +235,10 @@ if (cluster.isMaster) {
 ref: [nodejs.org](https://nodejs.org/api/cluster.html)
 
 ### Ensure that you can run “many” node-applications on a single droplet on the same port (80)
+
+This can be accomplished by implementing a reversy proxy i.e Nginx
+
+ref:[Hosting Multiple Apps on the same Server — Implement a Reverse Proxy with Node](https://itnext.io/hosting-multiple-apps-on-the-same-server-implement-a-reverse-proxy-with-node-a4e213497345)
 
 ## Explain the difference between “Debug outputs” and application logging. What’s wrong with console.log(..) statements in our backend-code.
 
