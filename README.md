@@ -24,7 +24,7 @@ JavaScript is only one of a plethora of popular backend languages that all got t
 
 ### Explain Pros & Cons in using Node.js + Express to implement your Backend compared to a strategy using, for example, Java/JAX-RS/Tomca
 
-#### PROS
+#### The Benefits of Node.js
 **Robust Technology Stack**
 
 JavaScript has proven to be an undisputed leader among the most popular programming languages. You can view the [2018 - Node.js User Survey Report ](https://nodejs.org/en/user-survey-report/#overview) for its usages.
@@ -65,7 +65,7 @@ One word – npm, a default Node.js package manager, it also serves as a marketp
 
 With such a vast variety of free tools accessible in a few clicks, there is a huge potential for the use of Node.js. At the same time, open source software enjoys a growing popularity as it allows you to build new solutions reducing the overall costs of development and time to market.
 
-#### CONSn
+#### The Drawbacks of Node.js
 **Performance Bottlenecks and Design Issues**
 
 Two of the most argued about aspects of Node.js programming are its insufficiency with heavy computations and the so-called *“callback hell”*. Before we get into too many details, let’s figure out what’s what.
@@ -113,7 +113,7 @@ Although, the core Node.js modules are quite stable and can be considered mature
 
 The fact that the Node.js ecosystem is mostly open source, has its impact as well. While the quality of the core Node.js technology is supervised by Joyent and other major contributors, the rest of the tools might lack the quality and high coding standards set by global organizations.
 
-#### CONCLUSION
+#### Conclusion
 
 Obviously, with all the listed Node.js advantages and disadvantages, the technology is no silver bullet. But neither is Java, .Net framework or PHP. Yet, there are specific cases where each one of the technologies perform best. For Node.js, these are real-time applications with intense I/O, requiring speed and scalability.
 
